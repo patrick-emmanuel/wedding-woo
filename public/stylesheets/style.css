@@ -1,0 +1,108 @@
+body {
+    font: 100% "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin-top: 12%;
+    padding-top: 65px;
+    background: url(../images/couple.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#content {
+    color: #fafafa;
+    background: rgba(29, 148, 191, 0.7);
+    margin-right: 90px;
+    padding: 20px 20px;
+    font-size: 18px;
+    font-family: 'Titillium Text';
+}
+
+#content h1 {
+    color: #1a276b;
+    font-family: 'Calligraffiti';
+    text-align: left;
+    font-size: 32px;
+}
+
+#content h2 {
+    color: #1a276b;
+    font-family: 'Great Vibes';
+    text-align: left;
+    font-size: 28px;
+}
+
+#content h3 {
+    color: #1a276b;
+    font-family: 'Great Vibes';
+    font-size: 21px;
+}
+
+#about-name {
+    color: #091f66;
+    font-family: 'Great Vibes';
+    font-size: 68px;
+}
+
+#about-date {
+    color: #f090e9;
+    text-transform: capitalize;
+    font-family: 'Titillium Text';
+    font-size: 24px;
+}
+
+#about-location {
+    color: #1d94bf;
+    font-family: 'Titillium Text';
+    font-size: 26px;
+}
+
+.container a,
+.container a:visited,
+.container a:active,
+.container a:hover {
+    color: #f090e9;
+}
+
+#time {
+    display: inline;
+    color: white;
+    font-size: 18px;
+}
+
+#no-content {
+    background: none;
+}
+
+.modal-body .form-horizontal .control-label {
+    text-align: left;
+    color: #000000
+}
+
+.modal-header {
+    color: #000000
+}
+
+.wedding-party-image {
+    margin-right: 10px;
+    width: 50%;
+    height: 60%;
+}
+
+.nav.navbar-nav a {
+    font-family: 'Journal';
+    font-size: 30px;
+}
+
+
+/*
+@media(min-width: 576px) and (max-width: 767px) {
+    body {
+        background-image: url(../images/couple.jpg) no-repeat center center fixed;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+}
+*/

@@ -1,0 +1,36 @@
+extends layout
+
+block content
+ #content
+  h1 Guestbook
+  p Feel free to share your thoughts and wishes as we prepare to celebrate our special day.
+  br
+  button.btn.btn-warning(type='button', data-toggle='modal', data-target='#messageModal') Post a message
+  .modal.fade(id='messageModal', tabindex='-1', role='dialog', aria-labelledby='messageModalLabel', aria-hidden='true')
+   .modal-dialog(role='document')
+    .modal-content
+     .modal-header
+      h4.modal-title#messageModalLabel Enter a message
+      button.close(type='button', data-dismiss='modal', aria-label='close')
+       span(aria-hidden='true') &times;
+       span.sr-only Close
+     .modal-body
+      form.form-horizontal(role='form')
+       .form-group
+        label.col-sm-2.control-label(for='nameText') Name
+        .col-sm-10
+         input.form-control#nameText(type='text', placeholder='Enter your name')
+       .form-group
+        label.col-sm-2.control-label(for='messageTextarea') Message
+        .col-sm-10
+         textarea.form-control#messageTextarea(rows='3')
+       .form-group
+        label.col-sm-2.control-label(for='messageFile') Photo
+        .col-sm-10
+         input.form-control-file#messageFile(type='file', )
+         small.form-text.text-muted Less than 5mb
+     .modal-footer
+      button.btn.btn-default(type='button', data-dismiss='modal') Cancel
+      button.btn.btn-primary(type='button') Save
+      
+    

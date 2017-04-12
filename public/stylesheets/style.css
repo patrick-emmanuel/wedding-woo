@@ -1,8 +1,12 @@
 body {
-    font: 100% "Lucida Grande", Helvetica, Arial, sans-serif;
-    margin-top: 12%;
-    padding-top: 65px;
-    background: url(../images/couple.jpg) no-repeat center center fixed;
+    font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    height: 100%;
+    background: url(../images/couple/couple.png) no-repeat center center fixed;
+    background-color: #ffffff;
+    line-height: 1.50;
+    position: relative;
+    color: #333333;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -18,30 +22,32 @@ body {
     font-family: 'Titillium Text';
 }
 
-#content h1 {
+h1 {
     color: #1a276b;
+}
+
+#content h1 {
     font-family: 'Calligraffiti';
     text-align: left;
     font-size: 32px;
 }
 
 #content h2 {
-    color: #1a276b;
     font-family: 'Great Vibes';
     text-align: left;
     font-size: 28px;
 }
 
 #content h3 {
-    color: #1a276b;
     font-family: 'Great Vibes';
     font-size: 21px;
 }
 
 #about-name {
-    color: #091f66;
+    margin-top: 70px;
     font-family: 'Great Vibes';
     font-size: 68px;
+    color: #ffffff;
 }
 
 #about-date {
@@ -55,6 +61,19 @@ body {
     color: #1d94bf;
     font-family: 'Titillium Text';
     font-size: 26px;
+}
+
+a {
+    color: #55acee;
+}
+
+a:hover {
+    color: #339BEB;
+}
+
+a:focus,
+a:active {
+    outline: none;
 }
 
 .container a,
@@ -89,9 +108,58 @@ body {
     height: 60%;
 }
 
-.nav.navbar-nav a {
-    font-family: 'Journal';
+.wedding-photo {
+    margin-right: 10px;
+    width: 100%;
+    height: 50%;
+}
+
+.header {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.10);
+    padding: 10px 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.header .navbar {
+    margin-bottom: 0;
+}
+
+.navbar .navbar-nav>li>a {
+    color: #fff;
+    padding: 10px 20px;
     font-size: 30px;
+    font-weight: 300;
+    font-family: 'Journal';
+}
+
+.navbar .navbar-nav>li>a:active {
+    background-color: transparent;
+    color: #55acee;
+}
+
+.navbar .navbar-nav>li>a:hover {
+    background-color: transparent;
+    color: #55acee;
+}
+
+.panel.message-panel {
+    color: #000000;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.error-message {
+    color: red;
+}
+
+.bold-text {
+    font-weight: bold;
 }
 
 

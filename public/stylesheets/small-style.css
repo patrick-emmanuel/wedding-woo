@@ -1,5 +1,14 @@
     body {
-        background: none;
+        background-image: url(../images/couple/couple5.png);
+        background-position: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        background-repeat: no-repeat;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
+        background-size: cover !important;
+        z-index: 1;
+        position: relative;
     }
     
     #content {
@@ -7,5 +16,14 @@
         background: none;
         margin: 10px auto 0px auto;
         padding: 20px 20px;
-        font-size: 13px;
+        font-size: 18px;
+    }
+    
+    .navbar.navbar-light {
+        background-color: none;
+    }
+    
+    .home-menu {
+        color: black;
+        font-weight: bold;
     }

@@ -1,0 +1,53 @@
+extends layout
+
+block content
+ #content
+  h1 Guestbook
+  p Feel free to share your thoughts and wishes as we prepare to celebrate our special day.
+  br
+  div(ng-controller="guestbookController")
+   button.btn.btn-warning(type='button', data-toggle='modal', data-target='#messageModal') Post a message
+   .modal.fade(id='messageModal', tabindex='-1', role='dialog', aria-labelledby='messageModalLabel', aria-hidden='true')
+    .modal-dialog(role='document')
+     .modal-content
+      .modal-header
+       h4.modal-title#messageModalLabel Enter a message
+       button.close(type='button', data-dismiss='modal', aria-label='close')
+        span(aria-hidden='true') &times;
+        span.sr-only Close
+      .modal-body
+       form.form-horizontal(ng-submit='addGuestbook()', role='form', name='guestbookForm', novalidate)
+        .form-group(ng-class="{'has-error':guestbookForm.name.$dirty && guestbookForm.name.$invalid}")
+         label.col-sm-2.control-label(for='name') Name
+         .col-sm-10
+          input.form-control#name(type='text', name='name', ng-model='guestbookData.name', ng-required='true', placeholder='Enter your name')
+          span.error-message(ng-show='guestbookForm.name.$dirty && guestbookForm.name.$invalid') Name is required.
+        .form-group(ng-class="{'has-error':guestbookForm.message.$dirty && guestbookForm.message.$invalid}")
+         label.col-sm-2.control-label(for='message') Message
+         .col-sm-10
+          textarea.form-control#message(rows='3', name='message', ng-model='guestbookData.message', ng-required='true', placeholder='Enter your message')
+          span.error-message(ng-show='guestbookForm.message.$dirty && guestbookForm.message.$invalid') Message is required.
+        .form-group
+         label.col-sm-2.control-label(for='photo') Photo
+         .col-sm-10
+          input.form-control-file#messageFile(type='file', )
+          small.form-text.text-muted Less than 5mb
+        .form-group
+         .col-sm-offset-2.col-sm-10
+          button.btn.btn-danger.btn-lg.pull-right(type='submit', onclick="$('.modal').modal('hide')") Post
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal') Cancel
+   .row
+    .panel.panel-danger.message-panel(ng-repeat='guestbook in guestbooks')
+     .panel-heading 
+      {{guestbook.name}}
+     .panel-body
+      p {{guestbook.message}}
+      span.label.label-warning.pull-right
+       {{guestbook.createdAt | date: 'MM-dd-yy'}}
+     
+     
+  
+    
+      
+    

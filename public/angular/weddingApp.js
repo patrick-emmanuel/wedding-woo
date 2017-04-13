@@ -9,6 +9,7 @@ var songRequestData = function($resource) {
 
 var guestbookController = function($scope, guestbookData) {
     $scope.guestbooks = guestbookData.query();
+    $scope.count = $scope.guestbooks.length;
 
     $scope.guestbookData = new guestbookData();
 
@@ -21,6 +22,7 @@ var guestbookController = function($scope, guestbookData) {
 };
 var songRequestController = function($scope, songRequestData) {
     $scope.songRequests = songRequestData.query();
+    $scope.count = $scope.songRequests.length;
 
     $scope.songRequestData = new songRequestData();
 

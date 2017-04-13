@@ -6,6 +6,8 @@ block content
   p Feel free to share your thoughts and wishes as we prepare to celebrate our special day.
   br
   div(ng-controller="guestbookController")
+   .label.label-danger.pull-right
+     {{guestbooks.length}} Comments
    button.btn.btn-warning(type='button', data-toggle='modal', data-target='#messageModal') Post a message
    .modal.fade(id='messageModal', tabindex='-1', role='dialog', aria-labelledby='messageModalLabel', aria-hidden='true')
     .modal-dialog(role='document')
@@ -38,7 +40,7 @@ block content
       .modal-footer
         button.btn.btn-default(type='button', data-dismiss='modal') Cancel
    .row
-    .panel.panel-danger.message-panel(ng-repeat='guestbook in guestbooks')
+    .panel.panel-default.message-panel(ng-repeat='guestbook in guestbooks')
      .panel-heading 
       {{guestbook.name}}
      .panel-body

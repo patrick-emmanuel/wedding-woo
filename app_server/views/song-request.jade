@@ -6,9 +6,11 @@ block content
   p We're taking requests! We would love to know what songs will get you moving on the dance floor.
   br
   hr
-  p <b><u>Request a Song</b></u>
   br
   div(ng-controller="songRequestController")
+   .label.label-danger.pull-right
+     {{songRequests.length}} Song Requests
+   br
    button.btn.btn-warning(type='button', data-toggle='modal', data-target='#messageModal') Request a song
    .modal.fade(id='messageModal', tabindex='-1', role='dialog', aria-labelledby='messageModalLabel', aria-hidden='true')
     .modal-dialog(role='document')

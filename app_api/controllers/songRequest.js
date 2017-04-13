@@ -11,6 +11,7 @@ module.exports.createSongRequest = function(req, res) {
     SongRequest.create({
         name: req.body.name,
         song: req.body.song,
+        artiste: req.body.artiste,
         createdAt: req.body.createdAt
     }, function(err, songRequest) {
         if (err) {
@@ -25,7 +26,6 @@ module.exports.createSongRequest = function(req, res) {
 module.exports.getSongRequests = function(req, res) {
     SongRequest
         .find({})
-        .populate('song')
         .exec(function(err, songRequests) {
             if (err) {
                 console.log(err);

@@ -8,6 +8,47 @@ block content
   hr
   p <b><u>Request a Song</b></u>
   br
-  hr
+  div(ng-controller="songRequestController")
+   button.btn.btn-warning(type='button', data-toggle='modal', data-target='#messageModal') Request a song
+   .modal.fade(id='messageModal', tabindex='-1', role='dialog', aria-labelledby='messageModalLabel', aria-hidden='true')
+    .modal-dialog(role='document')
+     .modal-content
+      .modal-header
+       h4.modal-title#messageModalLabel Enter a song
+       button.close(type='button', data-dismiss='modal', aria-label='close')
+        span(aria-hidden='true') &times;
+        span.sr-only Close
+      .modal-body
+       form.form-horizontal(ng-submit='addSongRequest()', role='form', name='songRequestForm', novalidate)
+        .form-group(ng-class="{'has-error':songRequestForm.name.$dirty && songRequestForm.name.$invalid}")
+         label.col-sm-2.control-label(for='name') Name
+         .col-sm-10
+          input.form-control#name(type='text', name='name', ng-model='songRequestData.name', ng-required='true', placeholder='Enter your name')
+          span.error-message(ng-show='guestbookForm.name.$dirty && guestbookForm.name.$invalid') Name is required.
+        .form-group(ng-class="{'has-error':songRequestForm.song.$dirty && songRequestForm.song.$invalid}")
+         label.col-sm-2.control-label(for='song') Song
+         .col-sm-10
+          input.form-control#song(type='text', name='song', ng-model='songRequestData.song', ng-required='true', placeholder='Enter a song')
+          span.error-message(ng-show='guestbookForm.song.$dirty && guestbookForm.song.$invalid') Song is required.
+        .form-group(ng-class="{'has-error':songRequestForm.artiste.$dirty && songRequestForm.artiste.$invalid}")
+         label.col-sm-2.control-label(for='song') Artiste
+         .col-sm-10
+          input.form-control#song(type='text', name='artiste', ng-model='songRequestData.artiste', ng-required='true', placeholder='Artiste')
+          span.error-message(ng-show='guestbookForm.artiste.$dirty && guestbookForm.artiste.$invalid') Artiste is required.
+        .form-group
+         .col-sm-offset-2.col-sm-10
+          button.btn.btn-primary.btn-md.pull-right(type='submit', onclick="$('.modal').modal('hide')") Add
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal') Cancel
+   .row
+    .panel.panel-primary.message-panel(ng-repeat='songRequest in songRequests')
+     .panel-heading 
+      {{songRequest.name}}
+     .panel-body
+      p Title:
+      .label.label-primary{{songRequest.song}} 
+      br  
+      span.badge.badge-primary.pull-right
+       By: {{songRequest.artiste}}
 
 

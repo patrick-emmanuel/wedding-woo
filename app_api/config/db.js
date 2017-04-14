@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
 require('../models/GuestBook');
 require('../models/SongRequest');
-require('../models/Song');
 
 var url = "mongodb://127.0.0.1/weddingdb";
 

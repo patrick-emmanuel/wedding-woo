@@ -30,11 +30,6 @@ block content
           textarea.form-control#message(rows='3', name='message', ng-model='guestbookData.message', ng-required='true', placeholder='Enter your message')
           span.error-message(ng-show='guestbookForm.message.$dirty && guestbookForm.message.$invalid') Message is required.
         .form-group
-         label.col-sm-2.control-label(for='photo') Photo
-         .col-sm-10
-          input.form-control-file#messageFile(type='file', )
-          small.form-text.text-muted Less than 5mb
-        .form-group
          .col-sm-offset-2.col-sm-10
           button.btn.btn-primary.btn-md.pull-right(type='submit', onclick="$('.modal').modal('hide')") Post
       .modal-footer

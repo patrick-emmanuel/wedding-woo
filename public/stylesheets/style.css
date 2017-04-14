@@ -108,6 +108,15 @@ a:active {
     height: 60%;
 }
 
+.badge.badge-primary {
+    font-size: 15px;
+}
+
+.map {
+    width: 60%;
+    height: 100%;
+}
+
 .wedding-photo {
     margin-right: 10px;
     width: 100%;

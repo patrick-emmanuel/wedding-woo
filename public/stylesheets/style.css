@@ -2,7 +2,7 @@ body {
     font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
     font-size: 15px;
     height: 100%;
-    background: url(../images/couple/couple.png) no-repeat center center fixed;
+    background: url(../images/couple/couple.jpg) no-repeat center center fixed;
     background-color: #ffffff;
     line-height: 1.50;
     position: relative;
@@ -48,6 +48,11 @@ h1 {
     font-family: 'Great Vibes';
     font-size: 68px;
     color: #ffffff;
+}
+
+.panel.panel-primary.map .panel-body {
+    padding: 0px 0px;
+    margin: 0px 0px;
 }
 
 #about-date {

@@ -19,8 +19,8 @@ module.exports.photos = function(req, res) {
     res.render('photos', { title: 'Photos' });
 };
 
-module.exports.invites = function(req, res) {
-    res.render('invites', { title: 'Invites' });
+module.exports.invite = function(req, res) {
+    res.render('invite', { title: 'Invites' });
 };
 
 module.exports.weddingParty = function(req, res) {

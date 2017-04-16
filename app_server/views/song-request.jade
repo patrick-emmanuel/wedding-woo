@@ -25,17 +25,17 @@ block content
         .form-group(ng-class="{'has-error':songRequestForm.name.$dirty && songRequestForm.name.$invalid}")
          label.col-sm-2.control-label(for='name') Name
          .col-sm-10
-          input.form-control#name(type='text', name='name', ng-model='songRequestData.name', ng-required='true', placeholder='Enter your name')
+          input.form-control#name(type='text', name='name', ng-model='songRequest.name', ng-required='true', placeholder='Enter your name')
           span.error-message(ng-show='guestbookForm.name.$dirty && guestbookForm.name.$invalid') Name is required.
         .form-group(ng-class="{'has-error':songRequestForm.song.$dirty && songRequestForm.song.$invalid}")
          label.col-sm-2.control-label(for='song') Song
          .col-sm-10
-          input.form-control#song(type='text', name='song', ng-model='songRequestData.song', ng-required='true', placeholder='Enter a song')
+          input.form-control#song(type='text', name='song', ng-model='songRequest.song', ng-required='true', placeholder='Enter a song')
           span.error-message(ng-show='guestbookForm.song.$dirty && guestbookForm.song.$invalid') Song is required.
         .form-group(ng-class="{'has-error':songRequestForm.artiste.$dirty && songRequestForm.artiste.$invalid}")
          label.col-sm-2.control-label(for='song') Artiste
          .col-sm-10
-          input.form-control#song(type='text', name='artiste', ng-model='songRequestData.artiste', ng-required='true', placeholder='Artiste')
+          input.form-control#song(type='text', name='artiste', ng-model='songRequest.artiste', ng-required='true', placeholder='Artiste')
           span.error-message(ng-show='guestbookForm.artiste.$dirty && guestbookForm.artiste.$invalid') Artiste is required.
         .form-group
          .col-sm-offset-2.col-sm-10

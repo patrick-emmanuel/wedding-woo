@@ -22,12 +22,12 @@ block content
         .form-group(ng-class="{'has-error':guestbookForm.name.$dirty && guestbookForm.name.$invalid}")
          label.col-sm-2.control-label(for='name') Name
          .col-sm-10
-          input.form-control#name(type='text', name='name', ng-model='guestbookData.name', ng-required='true', placeholder='Enter your name')
+          input.form-control#name(type='text', name='name', ng-model='guestbook.name', ng-required='true', placeholder='Enter your name')
           span.error-message(ng-show='guestbookForm.name.$dirty && guestbookForm.name.$invalid') Name is required.
         .form-group(ng-class="{'has-error':guestbookForm.message.$dirty && guestbookForm.message.$invalid}")
          label.col-sm-2.control-label(for='message') Message
          .col-sm-10
-          textarea.form-control#message(rows='3', name='message', ng-model='guestbookData.message', ng-required='true', placeholder='Enter your message')
+          textarea.form-control#message(rows='3', name='message', ng-model='guestbook.message', ng-required='true', placeholder='Enter your message')
           span.error-message(ng-show='guestbookForm.message.$dirty && guestbookForm.message.$invalid') Message is required.
         .form-group
          .col-sm-offset-2.col-sm-10
@@ -41,7 +41,7 @@ block content
      .panel-body
       p {{guestbook.message}}
       span.label.label-warning.pull-right
-       {{guestbook.createdAt | date: 'MM-dd-yy'}}
+       {{guestbook.createdAt | date: 'dd-MMM-yy'}}
      
      
   

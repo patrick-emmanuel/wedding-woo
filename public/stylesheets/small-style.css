@@ -2,6 +2,7 @@
         background-image: url(../images/couple/couple5.png);
         background-position: center center;
         background-repeat: no-repeat;
+        background-attachment: fixed;
         -webkit-background-size: cover !important;
         -moz-background-size: cover !important;
         -o-background-size: cover !important;
@@ -10,9 +11,10 @@
     
     #content {
         background: none;
-        margin: 10px auto 0px auto;
-        padding: 20px 20px;
-        font-size: 18px;
+        margin: 0px 0px;
+        padding-right: 0px;
+        padding-left: 0px;
+        font-size: 16px;
     }
     
     .navbar.navbar-light {
@@ -20,6 +22,11 @@
     }
     
     .home-menu {
-        color: black;
+        color: white;
         font-weight: bold;
+    }
+    
+    .panel.panel-primary.map .panel-body {
+        padding: 0px 0px;
+        margin: 0px 0px;
     }

@@ -17,8 +17,8 @@ router.get('/map', othersController.map);
 /* GET photos page. */
 router.get('/photos', othersController.photos);
 
-/* GET registry page. */
-router.get('/invites', othersController.invites);
+/* GET invite page. */
+router.get('/invites', othersController.invite);
 
 /* GET guestbook page. */
 router.get('/guestbook', messagesController.guestbook);

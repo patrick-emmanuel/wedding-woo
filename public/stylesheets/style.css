@@ -2,7 +2,7 @@ body {
     font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
     font-size: 15px;
     height: 100%;
-    background: url(../images/couple/couple.jpg) no-repeat center center fixed;
+    background: url(https://s3-us-west-2.amazonaws.com/mobile-medics/couple.jpg) no-repeat center center fixed;
     background-color: #ffffff;
     line-height: 1.50;
     position: relative;
